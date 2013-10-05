@@ -1,0 +1,764 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="templatemo_style.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="css/slide.css" type="text/css" media="screen" />
+      
+<link rel="stylesheet" type="text/css" href="slider_styles.css" />
+<script language="javascript" type="text/javascript" src="scripts/mootools-1.2.1-core.js"></script>
+<script language="javascript" type="text/javascript" src="scripts/mootools-1.2-more.js"></script>
+<script language="javascript" type="text/javascript" src="scripts/slideitmoo-1.1.js"></script>
+<script language="javascript" type="text/javascript">
+	window.addEvents({
+		'domready': function(){
+			/* thumbnails example , div containers */
+			new SlideItMoo({
+						overallContainer: 'SlideItMoo_outer',
+						elementScrolled: 'SlideItMoo_inner',
+						thumbsContainer: 'SlideItMoo_items',		
+						itemsVisible: 4,
+						elemsSlide: 2,
+						duration: 300,
+						itemsSelector: '.SlideItMoo_element',
+						itemWidth: 204,
+						showControls:1});
+		},
+		
+	});
+</script>
+
+    <title>Drag Down Lists </title>
+    <script language="Javascript">
+     
+     function make_select2()
+     {
+     var fm = document.form1;
+     
+     
+     for ( var i= fm.select2.length-1 ; i > 0 ; i-- )
+     {
+     fm.select2.remove( i );
+     }
+     
+     
+     //MEN
+     switch ( fm.select1.selectedIndex )
+     {
+     case 1:
+     var oOption = document.createElement("OPTION");
+     oOption.text="H&M";
+     oOption.value="1";
+     fm.select2.add( oOption );
+     var oOption1 = document.createElement("OPTION");
+     oOption1.text="GAP";
+     oOption1.value="2";
+     fm.select2.add( oOption1 );
+     var oOption2 = document.createElement("OPTION");
+     oOption2.text="ZARA";
+     oOption2.value="3";
+     fm.select2.add( oOption2 );
+     break;
+     //WOMEN
+     case 2:
+     var oOption = document.createElement("OPTION");
+     oOption.text="H&M";
+     oOption.value="101";
+     fm.select2.add(oOption);
+     var oOption1 = document.createElement("OPTION");
+     oOption1.text="GAP";
+     oOption1.value="102";
+     fm.select2.add( oOption1 );
+     var oOption2 = document.createElement("OPTION");
+     oOption2.text="ZARA";
+     oOption2.value="103";
+     fm.select2.add( oOption2 );
+     break;
+     }
+     }
+     
+     function make_select3()
+     {
+     var fm = document.form1;
+     
+     for ( var i= fm.select3.length-1 ; i > 0 ; i-- )
+     {
+     fm.select3.remove( i );
+     }
+     
+     
+     //MENHM
+     
+     switch ( fm.select2[ fm.select2.selectedIndex ].value )
+     
+     {
+     
+     case "1":
+     
+     var oOption = document.createElement("OPTION");
+     
+     oOption.text="SHIRTS";
+     
+     oOption.value="201";
+     
+     fm.select3.add( oOption );
+     
+     var oOption1 = document.createElement("OPTION");
+     
+     oOption1.text="TOPS&OUTWARE";
+     
+     oOption1.value="202";
+     
+     fm.select3.add( oOption1 );
+     
+     var oOption2 = document.createElement("OPTION");
+     
+     oOption2.text="JEANS";
+     
+     oOption2.value="203";
+     
+     fm.select3.add( oOption2 );
+     
+     var oOption3 = document.createElement("OPTION");
+     
+     oOption3.text="BELTS";
+     
+     oOption3.value="204";
+     
+     fm.select3.add( oOption3 );
+     
+     var oOption4 = document.createElement("OPTION");
+     
+     oOption4.text="BOTTOMS";
+     
+     oOption4.value="205";
+     
+     fm.select3.add( oOption4 );
+     
+     break;
+     
+     
+     
+     //MENGAP
+     
+     case "2":
+     
+     var oOption = document.createElement("OPTION");
+     
+     oOption.text="BOTTOMS";
+     
+     oOption.value="11";
+     
+     fm.select3.add(oOption);
+     
+     var oOption1 = document.createElement("OPTION");
+     
+     oOption1.text="DRESS_SHIRTS";
+     
+     oOption1.value="12";
+     
+     fm.select3.add( oOption1 );
+     
+     var oOption2 = document.createElement("OPTION");
+     
+     oOption2.text="TOPS&OUTWARE";
+     
+     oOption2.value="13";
+     
+     fm.select3.add( oOption2 );
+     
+     
+     break;
+     
+     
+     //MENZARA
+     case "3":
+     var oOption = document.createElement("OPTION");
+     oOption.text="SPORTS_COAT";
+     oOption.value="14";
+     fm.select3.add(oOption);
+     var oOption1 = document.createElement("OPTION");
+     oOption1.text="JACKET";
+     oOption1.value="15";
+     fm.select3.add( oOption1 );
+     var oOption2 = document.createElement("OPTION");
+     oOption2.text="WAISTCOAT";
+     oOption2.value="16";
+     fm.select3.add( oOption2 );
+     var oOption3 = document.createElement("OPTION");
+     oOption3.text="SUIT";
+     oOption3.value="17";
+     fm.select3.add( oOption3 );
+     var oOption4 = document.createElement("OPTION");
+     oOption4.text="CLASSIC_COAT";
+     oOption4.value="18";
+     fm.select3.add( oOption4 );
+     var oOption5 = document.createElement("OPTION");
+     oOption5.text="TROUSERS";
+     oOption5.value="19";
+     fm.select3.add( oOption5 );
+     var oOption6 = document.createElement("OPTION");
+     oOption6.text="JEANS";
+     oOption6.value="20";
+     fm.select3.add( oOption6 );
+     var oOption7 = document.createElement("OPTION");
+     oOption7.text="TRACKSUIT";
+     oOption7.value="21";
+     fm.select3.add( oOption7 );
+     var oOption8 = document.createElement("OPTION");
+     oOption8.text="UNDERWARE";
+     oOption8.value="22";
+     fm.select3.add( oOption8 );
+     var oOption9 = document.createElement("OPTION");
+     oOption9.text="SHORTS";
+     oOption9.value="23";
+     fm.select3.add( oOption9 );
+     var oOption10 = document.createElement("OPTION");
+     oOption10.text="T-SHIRTS";
+     oOption10.value="24";
+     fm.select3.add( oOption10 );
+     var oOption11 = document.createElement("OPTION");
+     oOption11.text="SWEATSHIRTS";
+     oOption11.value="25";
+     fm.select3.add( oOption11 );
+     
+     var oOption12 = document.createElement("OPTION");
+     oOption12.text="POLOS";
+     oOption12.value="26";
+     fm.select3.add( oOption12 );
+     var oOption13 = document.createElement("OPTION");
+     oOption13.text="JERSEY";
+     oOption13.value="27";
+     fm.select3.add( oOption13 );
+     var oOption14 = document.createElement("OPTION");
+     oOption14.text="CARDIGAN";
+     oOption14.value="28";
+     fm.select3.add( oOption14 );
+     var oOption15 = document.createElement("OPTION");
+     oOption15.text="SHIRTS";
+     oOption15.value="29";
+     fm.select3.add( oOption15 );
+     var oOption16 = document.createElement("OPTION");
+     oOption16.text="BELTS";
+     oOption16.value="30";
+     fm.select3.add( oOption16 );
+     var oOption17 = document.createElement("OPTION");
+     oOption17.text="GLOVES";
+     oOption17.value="31";
+     fm.select3.add( oOption17 );
+     var oOption18 = document.createElement("OPTION");
+     oOption18.text="HAT";
+     oOption18.value="32";
+     fm.select3.add( oOption18 );
+     var oOption19 = document.createElement("OPTION");
+     oOption19.text="SOCKS";
+     oOption19.value="33";
+     fm.select3.add( oOption19 );
+     var oOption20 = document.createElement("OPTION");
+     oOption20.text="FOOTWEAR";
+     oOption20.value="34";
+     fm.select3.add( oOption20 );
+     
+     break;
+     
+     //WOMENHM
+     case "101":
+     var oOption = document.createElement("OPTION");
+     oOption.text="TOPS&OUTERWEAR";
+     oOption.value="321";
+     fm.select3.add(oOption);
+     var oOption1 = document.createElement("OPTION");
+     oOption1.text="BLOUSES";
+     oOption1.value="322";
+     fm.select3.add( oOption1 );
+     var oOption2 = document.createElement("OPTION");
+     oOption2.text="SKIRTS";
+     oOption2.value="323";
+     fm.select3.add( oOption2 );
+     var oOption3 = document.createElement("OPTION");
+     oOption3.text="JEANS";
+     oOption3.value="324";
+     fm.select3.add( oOption3 );
+     
+     
+     break;
+     
+     //WOMENGAP
+     case "102":
+     var oOption = document.createElement("OPTION");
+     oOption.text="TOPS&OUTERWEAR";
+     oOption.value="325";
+     fm.select3.add(oOption);
+     var oOption1 = document.createElement("OPTION");
+     oOption1.text="JEANS";
+     oOption1.value="326";
+     fm.select3.add( oOption1 );
+     var oOption2 = document.createElement("OPTION");
+     oOption2.text="PANTS";
+     oOption2.value="327";
+     fm.select3.add( oOption2 );
+     var oOption3 = document.createElement("OPTION");
+     oOption3.text="SKIRTS";
+     oOption3.value="328";
+     fm.select3.add( oOption3 );
+     var oOption4 = document.createElement("OPTION");
+     oOption4.text="DRESSES";
+     oOption4.value="329";
+     fm.select3.add( oOption4 );
+     break;
+     
+     //WOMENZARA
+     case "103":
+     var oOption = document.createElement("OPTION");
+     oOption.text="CLOTHES";
+     oOption.value="330";
+     fm.select3.add(oOption);
+     var oOption1 = document.createElement("OPTION");
+     oOption1.text="TIGHTS&LEGGING";
+     oOption1.value="331";
+     fm.select3.add( oOption1 );
+     var oOption2 = document.createElement("OPTION");
+     oOption2.text="FOOTWEAR";
+     oOption2.value="332";
+     fm.select3.add( oOption2 );
+     break;
+     
+     
+     }
+     }
+     
+     
+     function make_select4()
+     {
+     var fm = document.form1;
+     
+     
+     for ( var i= fm.select4.length-1 ; i > 0 ; i-- )
+     {
+     fm.select4.remove( i );
+     }
+     switch ( fm.select3[ fm.select3.selectedIndex ].value )
+     {
+     case "325":
+     var oOption = document.createElement("OPTION");
+     oOption.text="REG";
+     oOption.value="401";
+     fm.select4.add(oOption);
+     var oOption1 = document.createElement("OPTION");
+     oOption1.text="PET";
+     oOption1.value="402";
+     fm.select4.add( oOption1 );
+     var oOption2 = document.createElement("OPTION");
+     oOption2.text="TALL";
+     oOption2.value="403";
+     fm.select4.add( oOption2 );
+     break;
+     
+     case "326":
+     var oOption = document.createElement("OPTION");
+     oOption.text="REG";
+     oOption.value="404";
+     fm.select4.add(oOption);
+     var oOption1 = document.createElement("OPTION");
+     oOption1.text="PET";
+     oOption1.value="405";
+     fm.select4.add( oOption1 );
+     var oOption2 = document.createElement("OPTION");
+     oOption2.text="TALL";
+     oOption2.value="406";
+     fm.select4.add( oOption2 );
+     break;
+     
+     case "327":
+     var oOption = document.createElement("OPTION");
+     oOption.text="REG";
+     oOption.value="407";
+     fm.select4.add(oOption);
+     var oOption1 = document.createElement("OPTION");
+     oOption1.text="PET";
+     oOption1.value="408";
+     fm.select4.add( oOption1 );
+     var oOption2 = document.createElement("OPTION");
+     oOption2.text="TALL";
+     oOption2.value="409";
+     fm.select4.add( oOption2 );
+     break;
+     
+     case "328":
+     var oOption = document.createElement("OPTION");
+     oOption.text="REG";
+     oOption.value="410";
+     fm.select4.add(oOption);
+     var oOption1 = document.createElement("OPTION");
+     oOption1.text="PET";
+     oOption1.value="411";
+     fm.select4.add( oOption1 );
+     var oOption2 = document.createElement("OPTION");
+     oOption2.text="TALL";
+     oOption2.value="412";
+     fm.select4.add( oOption2 );
+     break;
+     
+     case "329":
+     var oOption = document.createElement("OPTION");
+     oOption.text="REG";
+     oOption.value="413";
+     fm.select4.add( oOption );
+     var oOption1 = document.createElement("OPTION");
+     oOption1.text="PET";
+     oOption1.value="414";
+     fm.select4.add( oOption1 );
+     var oOption2 = document.createElement("OPTION");
+     oOption2.text="TALL";
+     oOption2.value="415";
+     fm.select4.add( oOption2 );
+     
+     break;
+     
+     case "12":
+     var oOption = document.createElement("OPTION");
+     oOption.text="REG";
+     oOption.value="416";
+     fm.select4.add( oOption );
+     var oOption1 = document.createElement("OPTION");
+     oOption1.text="TALL";
+     oOption1.value="417";
+     fm.select4.add( oOption1 );
+     
+     break;
+     case "13":
+     var oOption = document.createElement("OPTION");
+     oOption.text="REG";
+     oOption.value="418";
+     fm.select4.add( oOption );
+     var oOption1 = document.createElement("OPTION");
+     oOption1.text="TALL";
+     oOption1.value="419";
+     fm.select4.add( oOption1 );
+     
+     break;
+     
+     
+     }
+     }
+     
+    </script> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Design Work, Portfolio, Free Template</title>
+<meta name="keywords" content="design work, portfolio, free templates, CSS, HTML" />
+<meta name="description" content="Design Work, Portfolio, Free HTML CSS Template by templatemo.com" />
+<link href="templatemo_style.css" rel="stylesheet" type="text/css" />
+
+	<link rel="stylesheet" href="normalize5.css">
+	<link rel="stylesheet" href="style5.css">
+ <style>
+    body {
+    background:#transparent;
+    }
+     
+    div#wrapper {
+    background:#eee;
+    margin:0 auto;
+    padding:0;
+    width:960px;
+    min-height:600px
+    }
+     
+    .cf:before, .cf:after{
+    content:"";
+    display:table;
+    }
+     
+    .cf:after{
+    clear:both;
+    }
+     
+    .cf{
+    zoom:1;
+    }
+     
+    /* Form wrapper styling */
+    .form-wrapper {
+    width: 450px;
+    padding: 15px;
+    margin: 3px auto 5px auto;
+    background: #444;
+    background: rgba(0,0,0,.2);
+    border-radius: 10px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
+    }
+     
+    /* Form text input */
+     
+    .form-wrapper input {
+    width: 330px;
+    height: 20px;
+    padding: 10px 5px;
+    float: left;
+    font: bold 15px 'lucida sans', 'trebuchet MS', 'Tahoma';
+    border: 0;
+    background: #eee;
+    border-radius: 3px 0 0 3px;
+    }
+     
+    .form-wrapper input:focus {
+    outline: 0;
+    background: #fff;
+    box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+    }
+     
+    .form-wrapper input::-webkit-input-placeholder {
+    color: #999;
+    font-weight: normal;
+    font-style: italic;
+    }
+     
+    .form-wrapper input:-moz-placeholder {
+    color: #999;
+    font-weight: normal;
+    font-style: italic;
+    }
+     
+    .form-wrapper input:-ms-input-placeholder {
+    color: #999;
+    font-weight: normal;
+    font-style: italic;
+    }
+     
+    /* Form submit button */
+    .form-wrapper button {
+    overflow: visible;
+    position: relative;
+    float: right;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    height: 40px;
+    width: 110px;
+    font: bold 15px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
+    color: #fff;
+    text-transform: uppercase;
+    background: #d83c3c;
+    border-radius: 0 3px 3px 0;
+    text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
+    }
+     
+    .form-wrapper button:hover{
+    background: #e54040;
+    }
+     
+    .form-wrapper button:active,
+    .form-wrapper button:focus{
+    background: #c42f2f;
+    outline: 0;
+    }
+     
+    .form-wrapper button:before { /* left arrow */
+    content: '';
+    position: absolute;
+    border-width: 8px 8px 8px 0;
+    border-style: solid solid solid none;
+    border-color: transparent #d83c3c transparent;
+    top: 12px;
+    left: -6px;
+    }
+     
+    .form-wrapper button:hover:before{
+    border-right-color: #e54040;
+    }
+     
+    .form-wrapper button:focus:before,
+    .form-wrapper button:active:before{
+    border-right-color: #c42f2f;
+    }
+     
+    .form-wrapper button::-moz-focus-inner { /* remove extra button spacing for Mozilla Firefox */
+    border: 0;
+    padding: 0;
+    }
+    </style>
+   
+   
+   
+    <body>
+    
+
+      
+<div id="templatemo_body_wrapper">
+	<div id="templatemo_wrapper">
+    	
+        <div id="templatemo_header">
+            <div id="site_title"><h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1></div>
+            <div id="templatemo_menu">
+                <ul>
+                  <li><a href="home.html">Home</a></li>
+      
+                  <li><a href="men.html">Men</a></li>
+                  <li><a href="women.html">Women</a></li>
+                  <li><a href="blog.html">Blog</a></li>
+                  <li><a href="contact.html" class="last">Contact</a></li>
+                </ul>
+            </div> <!-- end of templatemo_menu -->
+        </div><!-- end of header -->
+        
+    
+<section class="loginform cf">
+		<form name="login" action="index_submit" method="get" accept-charset="utf-8">
+			<ul>
+				<li>
+					<label for="usermail">Email</label>
+					<input type="email" name="usermail" placeholder="yourname@email.com" required>
+				</li>
+				<li>
+					<label for="password">Password</label>
+					<input type="password" name="password" placeholder="password" required></li>
+				<li>
+					<input type="submit" value="Login">
+				</li>
+			</ul>
+		</form>
+        
+        
+	</section>
+ <form action = "homeaction.php"  method="post" class="form-wrapper cf">
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <select name="select1" onChange="make_select2()">
+         <option selected>SEX</option>
+         <option>MEN</option>
+         <option>WOMEN</option>
+     </select>
+     
+     <select name="select2" onChange="make_select3()">
+         <option>BRAND　</option>
+     </select>
+     
+     <select name="select3" onChange="make_select4()">
+         <option>STYLE</option>
+     </select>
+     
+     <select name="select4" >
+         <option>SHAPE</option>
+     </select>
+
+   <input type="text" placeholder="Input Your Size Here" required value id = "pcj_size_field" name = "pcj_size_field">
+    <button type="submit"name= "search" id = "search">Search</button>
+</form>
+ <form action = "homeaction.php"  method="post" class="form-wrapper cf">
+
+    <input type="text" placeholder="Input Your Chest Dimension" required name = "chest" id = "chest">    <input type="text" placeholder="Input Your Waist Dimension" required name = "waist" id = "waist">    <button type="submit" name = "size_submit" id = "size_submit">Search</button>    <input type="text" placeholder="Input Your Hip Dimension" required name = "hip" id = "hip">
+    
+    
+  </form>
+        
+      <div id="templatemo_main">
+        
+            <div class="cbox_fw">
+            	<div class="cbox_large float_l">
+                	<h2>&nbsp;</h2>
+                	<h2>Portfolio</h2>
+                	<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur dictum quam ac ipsum viverra pellentesque. Aliquam id elit purus, et aliquet justo. Quisque volutpat odio pellentesque nisl porttitor vehicula. Validate <a href="http://validator.w3.org/check?uri=referer" rel="nofollow"><strong>XHTML</strong></a> &amp; <a href="http://jigsaw.w3.org/css-validator/check/referer" rel="nofollow"><strong>CSS</strong></a>.</p>
+                	<p>Integer id ipsum magna, non facilisis risus. Mauris adipiscing bibendum lorem, at hendrerit eros pellentesque at. Aliquam erat volutpat. Pellentesque sit amet mauris mi. Praesent diam urna, venenatis nec sagittis vel, pharetra a diam. Aliquam in lacus sem.</p>
+		      <div class="cleaner h20"></div>
+					<div class="cbox_small float_l">
+                   	  <h5 class="tw_bullet">What We Do</h5>
+                    	<img src="images/home1.jpg" alt="marketing" width="287" height="154" class="image_frame" />
+                   	  <h5>We Have Free Services for Everyone</h5>
+                    	<h5>We Have More Options for You                      </h5>
+                   	  <p> PerFit is developing the solution to the &ldquo;online fit   problem&rdquo; to help both online apparel retailers and consumers enjoy a   simplified online shopping experience with fewer returns by using data   aggregation and analysis. 				  </p>
+					</div>
+                    <div class="cbox_small float_r">
+                   	  <h5 class="tw_bullet">Our Experiences</h5>
+                    	<img src="images/home2.jpg" alt="consulting" width="287" height="154" class="image_frame" />
+                        <p>Mauris adipiscing bibendum lorem, at hendrerit eros pellentesque at. Aliquam erat volutpat. Pellentesque sit amet mauris mi. Praesent diam urna, venenatis nec sagittis vel, pharetra a diam.</p>
+                        <p>Quisque volutpat odio pellentesque nisl porttitor vehicula. Aliquam in lacus sem. Integer id ipsum magna, non facilisis risus.</p>
+	
+                    </div>
+                </div>
+                <div class="cbox_small float_r">
+                	<h2>&nbsp;</h2>
+                	<h2>Find Brand</h2>
+                    <div class="rp_box">
+                    	<a href="http://www.calvinklein.com/home/index.jsp"><img src="images/calvin_klein_logo_2623.jpg" alt="image 1" width="134" height="100" /></a>
+                   	  <p>Nunc varius, odio lobortis tempor mollis, sapien risus dapibus ligula...</p>
+                        <a href="#" class="more float_r"><span>&gt;&gt;</span> Read More</a>
+                      <div class="cleaner"></div>
+                  	</div>
+                    
+                    <div class="rp_box">
+                    	<a href="http://www.zara.com/"><img src="images/zara-logo.jpg" alt="image 2" width="134" height="100" /></a>
+                    	<p>Donec aliquet, neque eget mattis lacinia, dolor mauris ultricies diam...</p>
+                        <a href="#" class="more float_r"><span>&gt;&gt;</span> Read More</a>
+                      <div class="cleaner"></div>
+                  	</div>
+                    
+                    <div class="rp_box">
+                    	<a href="http://www.hm.com/us/"><img src="images/1359046790-hm-logo.png" alt="image 3" width="134" height="100" /></a>
+                    	<p>Vestibulum sem urna, euismod ornare malesuada eget, vehicula id enim...</p>
+                        <a href="#" class="more float_r"><span>&gt;&gt;</span> Read More</a>
+                      <div class="cleaner"></div>
+                  	</div>
+                    
+                    <div class="rp_box">
+                    	<a href="http://www.gap.com/"><img src="images/gap_logo.jpg" alt="image 4" width="134" height="100" /></a>
+
+                    	<p>Ut turpis nulla, tincidunt rutrum condimentum ac, tempor lacinia turpis...</p>
+                        <a href="#" class="more float_r"><span>&gt;&gt;</span> Read More</a>
+                        <div class="cleaner"></div>
+                    </div>
+                </div>
+                <div id="latest_works">
+        	<h2>Brand Collection</h2>
+            <div id="SlideItMoo_outer">	
+                <div id="SlideItMoo_inner">			
+                    <div id="SlideItMoo_items">
+                        <div class="SlideItMoo_element">
+                        <span></span>
+                                <a href="http://www.templatemo.com/page/1" target="_parent">
+                                <img src="images/calvin_klein_logo_2623.jpg" alt="image 1" width="190" height="76" /></a>
+                        </div>	
+                        <div class="SlideItMoo_element"><span></span>
+                                <a href="http://www.templatemo.com/page/2" target="_parent">
+                               <img src="images/zara-logo.jpg" alt="image 2" width="190" height="76" /></a>
+                        </div>
+                        <div class="SlideItMoo_element"><span></span>
+                                <a href="http://www.templatemo.com/page/3" target="_parent">
+                                <img src="images/1359046790-hm-logo.png" alt="image 3" width="190" height="76" /></a>
+                        </div>
+                        <div class="SlideItMoo_element"><span></span>
+                                <a href="http://www.templatemo.com/page/4" target="_parent">
+                               <img src="images/gap_logo.jpg" alt="image 4" width="190" height="76" /></a>
+                        </div>
+                        <div class="SlideItMoo_element"><span></span>
+                                <a href="http://www.templatemo.com/page/5" target="_parent">
+                               <img src="images/gallery/05.jpg" alt="product 1" /></a>
+                        </div>
+                        <div class="SlideItMoo_element"><span></span>
+                                <a href="http://www.templatemo.com/page/6" target="_parent">
+                                <img src="images/gallery/06.jpg" alt="product 1" /></a>
+                        </div>
+                    </div>			
+                </div>
+			</div>
+        </div>
+              <div class="cleaner"></div>
+                
+                        	<div class="cbox_fw">
+                        	  <div class="cleaner"></div>
+            </div>
+            
+            </div>
+            
+        </div> <!-- end of main -->
+    
+    </div>
+</div>
+
+<div id="templatemo_footer_wrapper">
+    <div id="templatemo_footer">
+        Copyright © 2013 Perfit| Designed by <a href="http://www.templatemo.com" target="_parent">Team Perfit</a>
+        <div class="cleaner"></div>
+    </div>
+</div>
+
+</body>
+</html>
